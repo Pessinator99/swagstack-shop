@@ -1,0 +1,108 @@
+Du baust einen modernen B2B-Werbemittel-Onlineshop mit KI-Features.
+
+# TECH-STACK (fix, nicht ändern)
+- Next.js 15 (App Router, TypeScript, React Server Components)
+- Supabase (Postgres, Auth, Storage, Row-Level-Security)
+- Stripe (Checkout + Webhooks, Karte/SEPA/Klarna)
+- Tailwind CSS v4 + shadcn/ui (New York style)
+- Framer Motion für Animationen
+- Nodemailer via SMTP (Office 365 / Google Workspace konfigurierbar via ENV)
+- Zod für Validierung, React Hook Form für Forms
+- TanStack Query für Client-State / Mutations
+- Resend-ähnliches React Email für Templates, aber via SMTP versendet
+- Deployment: Vercel
+- Paketmanager: pnpm
+
+# KI-STACK (fix)
+- Claude Haiku 4.5 (Vision) via Anthropic SDK → Druckflächen-Detection auf Produktbildern (strukturiertes JSON)
+- Nano Banana 2 = Gemini 3.1 Flash Image Preview via Google Generative AI SDK → Moodboard-Bilder
+- remove.bg API → automatischer Background-Removal beim Logo-Upload
+- Vectorizer.ai API (oder recraft.ai) → JPG/PNG → SVG Vektorisierung
+- Für Logo-Overlay auf Produktbildern KEINE KI, sondern reines Client-seitiges Compositing (HTML Canvas / SVG)
+
+# GESCHÄFTSLOGIK (sehr wichtig!)
+- Zielgruppe: B2B only. Preise sind nur nach Login sichtbar.
+- Produkte haben MEHRERE Druckflächen und MEHRERE Veredelungstechniken pro Druckfläche.
+- Preisstaffeln existieren auf ZWEI Ebenen:
+  1. Produkt-Grundpreis gestaffelt nach Menge (z.B. 50/100/250/500/1000)
+  2. Veredelungspreis GETRENNT gestaffelt nach Menge (Setup + Stückpreis)
+- Jede Staffelung hat EK (Einkaufspreis) + VK (Verkaufspreis). Im Admin überschreibbar.
+- Marge ist pro Produkt UND pro Kategorie einstellbar (Produkt-Marge overridet Kategorie-Marge).
+- MOQ (Mindestbestellmenge) pro Produkt im Admin einstellbar. Darunter ist das Produkt NICHT bestellbar.
+- Finaler Preis = (EK_Produkt * (1 + Marge_Produkt)) + (EK_Veredelung * (1 + Marge_Veredelung)) + Setup-Kosten
+- Staffel-Interpolation: Bei Mengen ZWISCHEN Staffelpunkten wird der nächsthöhere Staffelpreis genommen (nicht interpoliert).
+
+# DATENQUELLEN (Phase 3)
+- Lieferanten-APIs: Stricker, PF Concept, Makito – werden via Adapter-Pattern in ein einheitliches internes Schema gemappt.
+- Sync-Rhythmus:
+  - Produkte: 1× pro Woche (Cron Sonntag Nacht)
+  - Preise: täglich (Cron 03:00 Uhr)
+  - Lagerbestand: stündlich
+- Freigabe-Workflow: Neu importierte Produkte landen in Status "pending". Regelbasiert oder manuell auf "active".
+- Lieferanten-Preise sind überschreibbar; bei erneutem Sync wird der Override NICHT überschrieben.
+
+# KI-FEATURES (Phase 2)
+## Feature A: Logo-Upload & -Verarbeitung
+- Kunde lädt Logo hoch (PNG/JPG/SVG, max 10MB)
+- Pipeline: Upload → BG-Removal (remove.bg) → optional Vektorisierung → Farb-Extraktion (dominante Farben für Druck-Farb-Auswahl)
+- Logo wird pro Kunde im Supabase Storage gespeichert, mehrere Logo-Varianten möglich ("Hauptlogo", "Weiß-Variante", etc.)
+
+## Feature B: Automatische Druckflächen-Detection
+- Beim Produkt-Import analysiert Claude Haiku Vision das Hauptbild + die PDF-Veredelungsdaten.
+- Output: JSON mit Koordinaten (x, y, width, height in % des Bildes), Perspektive-Hinweis, empfohlener Druckfläche, empfohlener Technik (= "meistgenutzte Veredelung").
+- Admin sieht Vorschlag im Backend und kann ihn per Klick/Drag korrigieren.
+
+## Feature C: Logo-Overlay auf Produktbildern (Shop-Ansicht)
+- TECHNISCH: KEIN KI-Rendering, sondern Canvas-Overlay.
+- Kunde-Logo wird mit den im Backend hinterlegten Koordinaten + Perspektive auf Produktfoto gelegt.
+- Wird in Grid (Kategorie-Seite), Detail-Seite, Warenkorb angezeigt.
+- Rendering via HTML Canvas (Client) + serverseitiger Edge-Cache pro Kunde+Produkt.
+
+## Feature D: Moodboard-Generator
+- Kunde wählt Branche (Tech, Gastro, Sport, Beauty, Bau, Bildung, Events, Gesundheit) → passende Szenarien-Prompts vordefiniert.
+- Nano Banana 2 generiert 1 Bild pro Produkt mit Logo im Kontext.
+- Prompt-Template: "Product photography of [PRODUCT] with [LOGO] applied on [PRINT_AREA] via [PRINT_TECHNIQUE], placed in [SCENE_PROMPT]. Photorealistic, natural lighting, commercial quality."
+- Ergebnis im Kunden-Account unter "Moodboards" gespeichert, downloadbar als PNG, teilbar per Link.
+- Rate-Limit: 20 Moodboards / Tag / Kunde (konfigurierbar in Admin-Settings).
+
+# DESIGN-RICHTLINIEN
+- Stil: Bold & modern. Kräftige Farben, starke Typografie, Gradients dezent einsetzen (nur Hero/CTA).
+- Produkt-Übersicht: klassisches Grid links Filter, 3-4 Spalten Desktop / 2 Spalten Tablet / 1 Spalte Mobile.
+- Produktdetail: alles auf einer Seite, Live-Preisberechnung ohne Page-Reload.
+- Branding: siehe Header dieses Dokuments.
+- Mobile-first. Touch-Targets min. 44px. Alle interaktiven Elemente haben Hover- und Focus-States.
+- Accessibility: WCAG AA, alle Inputs mit Labels, Kontrast geprüft.
+
+# CODING-REGELN
+- Server Components wo immer möglich, Client Components nur bei Interaktivität (mit "use client" markiert)
+- Alle DB-Zugriffe via Supabase-Client in serverseitigen Actions oder Route Handlers
+- Row-Level-Security IMMER aktiviert. Regeln explizit formulieren.
+- Keine Secrets im Client. Alle KI-API-Calls über serverseitige Route Handlers.
+- Validierung: Zod-Schemas für jede API-Route UND im Client-Form.
+- Error-Handling: try/catch + typed errors, UI-Feedback via Sonner Toasts.
+- Loading-States: Suspense + Skeletons, nicht leere Bildschirme.
+- Struktur:
+  /app
+    /(shop)           → öffentlicher Shop (Login-Gate für Preise)
+    /(admin)          → /admin Admin-Dashboard (Role-Check)
+    /api              → Route Handlers
+  /components
+    /ui               → shadcn Primitives
+    /shop             → Shop-spezifische Komponenten
+    /admin            → Admin-spezifische Komponenten
+    /shared           → Cross-Cutting (Header, Footer, Logo etc.)
+  /lib
+    /supabase         → Server- & Client-Instanzen
+    /pricing          → Preis-Engine (reine Funktionen, testbar)
+    /ai               → Claude, Gemini, remove.bg Wrapper
+    /suppliers        → Adapter pro Lieferant + Mapper
+  /types              → geteilte TypeScript-Typen
+  /emails             → React Email Templates
+- Tests: Vitest für Preis-Engine und Supplier-Mapper (diese MÜSSEN getestet sein).
+
+# NIEMALS
+- Preise clientseitig berechnen (immer Server-Side, gegen Manipulation)
+- Ungeprüft Daten aus Lieferanten-API in die Hauptdatenbank schreiben (immer über Staging/Pending)
+- Kunde darf NIE EKs sehen (RLS-Regeln)
+- Logo-Upload ohne Content-Type-Prüfung und Größen-Limit akzeptieren
+- Stripe-Webhook ohne Signatur-Verifizierung verarbeiten

@@ -1,0 +1,310 @@
+{
+  "_comment": "Komplette Produktdaten aus Stricker-PDFs für Migration 0016. Alle Hex-Farben sind aus den echten Bildern extrahiert. Die Bilder liegen entpackt in /home/claude/bilder-strukturiert/{slug}/ und im ZIP swagstack-produktbilder.zip. Bildbenennung: {stricker_id}_{farbcode}.jpg = Hauptbild, -a/-b/-c/-d/-e = Perspektiven, -logo = Mockup mit Beispiel-Logo, set = Übersicht aller Farben.",
+  "products": [
+    {
+      "slug": "canary-einkaufstasche-non-woven",
+      "stricker_id": "92839",
+      "name": "CANARY Einkaufstasche aus Non-Woven (80 g/m²)",
+      "category_slug": "taschen",
+      "description": "Tragetasche aus Non-Woven (80 g/m²), thermoversiegelt und mit 75 cm langen Henkeln. Erhältlich in verschiedenen Farben.",
+      "dimensions": "380 x 415 x 85 mm",
+      "weight_g": 36,
+      "material": "Non-Woven 80 g/m²",
+      "country_of_origin": "China",
+      "moq": 50,
+      "supplier": "Stricker",
+      "variants": [
+        {"code": "102", "color_name": "Pink", "hex": "#F15585", "main_image": "92839_102.jpg", "logo_mockup_image": "92839_102-logo.jpg"},
+        {"code": "103", "color_name": "Schwarz", "hex": "#414141", "main_image": "92839_103.jpg"},
+        {"code": "104", "color_name": "Dunkelblau", "hex": "#4C5E74", "main_image": "92839_104.jpg"},
+        {"code": "105", "color_name": "Rot", "hex": "#E03627", "main_image": "92839_105.jpg"},
+        {"code": "106", "color_name": "Weiß", "hex": "#F3F3F3", "main_image": "92839_106.jpg"},
+        {"code": "108", "color_name": "Gelb", "hex": "#DEC522", "main_image": "92839_108.jpg"},
+        {"code": "114", "color_name": "Royalblau", "hex": "#4965AE", "main_image": "92839_114.jpg"},
+        {"code": "119", "color_name": "Grün", "hex": "#8EB82E", "main_image": "92839_119.jpg"},
+        {"code": "124", "color_name": "Türkis", "hex": "#02B0C8", "main_image": "92839_124.jpg", "logo_mockup_image": "92839_124-logo.jpg"},
+        {"code": "128", "color_name": "Orange", "hex": "#FF8504", "main_image": "92839_128.jpg"},
+        {"code": "131", "color_name": "Beige", "hex": "#FCEFCF", "main_image": "92839_131.jpg"},
+        {"code": "132", "color_name": "Lila", "hex": "#97509C", "main_image": "92839_132.jpg", "logo_mockup_image": "92839_132-logo.jpg"}
+      ],
+      "print_areas": [
+        {
+          "name": "Vorderseite",
+          "max_width_mm": 300,
+          "max_height_mm": 300,
+          "techniques": [
+            {"name": "Textildruck", "code": "TXP1", "max_colors": 1},
+            {"name": "Digitaler Transfer", "code": "TRD1", "max_colors": null, "full_color": true},
+            {"name": "Transferdruck", "code": "TRS1", "max_colors": 4}
+          ]
+        },
+        {
+          "name": "Rückseite",
+          "max_width_mm": 300,
+          "max_height_mm": 300,
+          "techniques": [
+            {"name": "Textildruck", "code": "TXP1", "max_colors": 1},
+            {"name": "Digitaler Transfer", "code": "TRD1", "max_colors": null, "full_color": true},
+            {"name": "Transferdruck", "code": "TRS1", "max_colors": 4}
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "boston-laptop-rucksack-17",
+      "stricker_id": "92675",
+      "name": "BOSTON Wasserdichter 2Tone Nylon 17'' Laptop-Rucksack",
+      "category_slug": "rucksaecke",
+      "description": "Laptop-Rucksack, wasserdicht, mit integriertem Fach im Trolleyriemen. Schützen Sie Ihre Geräte unter allen Bedingungen sicher und zuverlässig.",
+      "dimensions": "310 x 470 x 200 mm",
+      "weight_g": 989,
+      "material": "Außen: 2-Tone Nylon, Innen: 210D Polyester",
+      "volume_l": 20,
+      "laptop_size": "17\"",
+      "country_of_origin": "China",
+      "moq": 10,
+      "supplier": "Stricker",
+      "variants": [
+        {"code": "103", "color_name": "Schwarz", "hex": "#35363B", "main_image": "92675_103.jpg"},
+        {"code": "104", "color_name": "Navy", "hex": "#3D4B61", "main_image": "92675_104.jpg", "logo_mockup_image": "92675_104-logo.jpg"},
+        {"code": "129", "color_name": "Olivgrün", "hex": "#5F6647", "main_image": "92675_129.jpg", "logo_mockup_image": "92675_129-logo.jpg"},
+        {"code": "133", "color_name": "Hellgrau", "hex": "#7A7A7E", "main_image": "92675_133.jpg", "logo_mockup_image": "92675_133-logo.jpg"}
+      ],
+      "print_areas": [
+        {
+          "name": "Vordertasche mittig",
+          "max_width_mm": 120,
+          "max_height_mm": 120,
+          "is_default": true,
+          "techniques": [
+            {"name": "Digitaler Transfer", "code": "TRD1", "max_colors": null, "full_color": true},
+            {"name": "Transferdruck", "code": "TRS3", "max_colors": 4}
+          ]
+        },
+        {
+          "name": "Untere Tasche",
+          "max_width_mm": 150,
+          "max_height_mm": 100,
+          "techniques": [
+            {"name": "Digitaler Transfer", "code": "TRD3", "max_colors": null, "full_color": true},
+            {"name": "Transferdruck", "code": "TRS3", "max_colors": 4}
+          ]
+        },
+        {
+          "name": "Rechter Schultergurt",
+          "max_width_mm": 100,
+          "max_height_mm": 40,
+          "techniques": [
+            {"name": "Digitaler Transfer", "code": "TRD3", "max_colors": null, "full_color": true},
+            {"name": "Transferdruck", "code": "TRS3", "max_colors": 4}
+          ]
+        },
+        {
+          "name": "Linker Schultergurt",
+          "max_width_mm": 100,
+          "max_height_mm": 40,
+          "techniques": [
+            {"name": "Digitaler Transfer", "code": "TRD3", "max_colors": null, "full_color": true},
+            {"name": "Transferdruck", "code": "TRS3", "max_colors": 4}
+          ]
+        },
+        {
+          "name": "Linke untere Tasche",
+          "max_width_mm": 60,
+          "max_height_mm": 95,
+          "techniques": [
+            {"name": "Digitaler Transfer", "code": "TRD3", "max_colors": null, "full_color": true},
+            {"name": "Transferdruck", "code": "TRS3", "max_colors": 4}
+          ]
+        },
+        {
+          "name": "Rechte untere Tasche",
+          "max_width_mm": 60,
+          "max_height_mm": 95,
+          "techniques": [
+            {"name": "Digitaler Transfer", "code": "TRD3", "max_colors": null, "full_color": true},
+            {"name": "Transferdruck", "code": "TRS3", "max_colors": 4}
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nicklaus-edelstahlflasche-590ml",
+      "stricker_id": "94376",
+      "name": "NICKLAUS Edelstahlflasche (91% recycelt) mit vakuumisolierter Doppelwand 590 mL",
+      "category_slug": "trinkflaschen",
+      "description": "Flasche aus rostfreiem Stahl (91% recycelt) mit doppelter Vakuumisolierung und kupferbeschichteter Innenwand. Auslaufsicherer PP-Deckel mit erleichterndem Knopf. Matte Oberfläche. Wird in Geschenkkarton aus Kraftpapier geliefert.",
+      "dimensions": "ø78 x 248 mm",
+      "weight_g": 320,
+      "capacity_ml": 590,
+      "material": "Edelstahl 91% recycelt",
+      "country_of_origin": "China",
+      "moq": 24,
+      "supplier": "Stricker",
+      "variants": [
+        {"code": "103", "color_name": "Schwarz matt", "hex": "#171717", "main_image": "94376_103.jpg"},
+        {"code": "134", "color_name": "Navy matt", "hex": "#365470", "main_image": "94376_134.jpg", "logo_mockup_image": "94376_134-logo.jpg"}
+      ],
+      "print_areas": [
+        {
+          "name": "Körper",
+          "max_width_mm": 150,
+          "max_height_mm": 130,
+          "is_default": true,
+          "techniques": [
+            {"name": "Siebdruck", "code": "SCR3", "max_colors": 1},
+            {"name": "Laser", "code": "LSR2", "max_colors": null, "is_engraving": true, "max_width_mm_override": 30, "max_height_mm_override": 130},
+            {"name": "Laser rundum", "code": "LAS1", "max_colors": null, "is_engraving": true},
+            {"name": "360° UV Druck Mate", "code": "UVC1", "max_colors": null, "full_color": true},
+            {"name": "360° UV Druck Glossy", "code": "UVC2", "max_colors": null, "full_color": true}
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cinander-keramikbecher-weiss",
+      "stricker_id": "93832",
+      "name": "CINANDER Keramikbecher mit glänzender Oberfläche, 370 ml (weiße Innenseite)",
+      "category_slug": "tassen-becher",
+      "description": "Keramikbecher mit glänzender Oberfläche und weißer Innenseite. Spülmaschinengeeignet (mind. 125 Waschgänge gem. EN12875-1).",
+      "dimensions": "ø84 x 103 mm",
+      "weight_g": 344,
+      "capacity_ml": 370,
+      "material": "Keramik",
+      "country_of_origin": "China",
+      "moq": 20,
+      "supplier": "Stricker",
+      "variants": [
+        {"code": "103", "color_name": "Schwarz", "hex": "#353535", "main_image": "93832_103.jpg"},
+        {"code": "105", "color_name": "Rot", "hex": "#DF2D2D", "main_image": "93832_105.jpg", "logo_mockup_image": "93832_105-logo.jpg"},
+        {"code": "108", "color_name": "Gelb", "hex": "#CB9801", "main_image": "93832_108.jpg"},
+        {"code": "113", "color_name": "Grau", "hex": "#686F75", "main_image": "93832_113.jpg"},
+        {"code": "119", "color_name": "Grün", "hex": "#82A94C", "main_image": "93832_119.jpg"},
+        {"code": "124", "color_name": "Hellblau", "hex": "#309AC1", "main_image": "93832_124.jpg", "logo_mockup_image": "93832_124-logo.jpg"},
+        {"code": "128", "color_name": "Orange", "hex": "#E47E2A", "main_image": "93832_128.jpg"},
+        {"code": "134", "color_name": "Dunkelblau", "hex": "#1E2B4D", "main_image": "93832_134.jpg"}
+      ],
+      "print_areas": [
+        {
+          "name": "Gefäß oben",
+          "max_width_mm": 210,
+          "max_height_mm": 60,
+          "is_default": true,
+          "techniques": [
+            {"name": "Firing - Low Temperature", "code": "FIR1", "max_colors": 10},
+            {"name": "Firing - High Temperature", "code": "FIR2", "max_colors": 2}
+          ]
+        },
+        {
+          "name": "Boden",
+          "max_width_mm": 25,
+          "max_height_mm": 25,
+          "techniques": [
+            {"name": "Tampondruck", "code": "PDP4", "max_colors": 1},
+            {"name": "Firing - Low Temperature", "code": "FIR1", "max_colors": 10},
+            {"name": "Firing - High Temperature", "code": "FIR2", "max_colors": 2}
+          ]
+        },
+        {
+          "name": "Seitlich oben",
+          "max_width_mm": 30,
+          "max_height_mm": 25,
+          "techniques": [
+            {"name": "Tampondruck", "code": "PDP4", "max_colors": 1}
+          ]
+        },
+        {
+          "name": "Innenseite",
+          "max_width_mm": 50,
+          "max_height_mm": 20,
+          "techniques": [
+            {"name": "Firing - Low Temperature", "code": "FIR1", "max_colors": 10},
+            {"name": "Firing - High Temperature", "code": "FIR2", "max_colors": 2}
+          ]
+        },
+        {
+          "name": "Griff",
+          "max_width_mm": 9,
+          "max_height_mm": 40,
+          "techniques": [
+            {"name": "Firing - Low Temperature", "code": "FIR1", "max_colors": 10},
+            {"name": "Firing - High Temperature", "code": "FIR2", "max_colors": 2}
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "comander-keramikbecher-370ml",
+      "stricker_id": "93833",
+      "name": "COMANDER Keramikbecher mit glänzender Oberfläche, 370 ml",
+      "category_slug": "tassen-becher",
+      "description": "Keramikbecher mit glänzender Oberfläche. Spülmaschinengeeignet (mind. 125 Waschgänge gem. EN12875-1).",
+      "dimensions": "ø90 x 85 mm",
+      "weight_g": 358,
+      "capacity_ml": 370,
+      "material": "Keramik",
+      "country_of_origin": "China",
+      "moq": 20,
+      "supplier": "Stricker",
+      "variants": [
+        {"code": "103", "color_name": "Schwarz", "hex": "#4F4F4F", "main_image": "93833_103.jpg"},
+        {"code": "105", "color_name": "Rot", "hex": "#D94A4E", "main_image": "93833_105.jpg", "logo_mockup_image": "93833_105-logo.jpg"},
+        {"code": "108", "color_name": "Gelb", "hex": "#ECBC2A", "main_image": "93833_108.jpg", "logo_mockup_image": "93833_108-logo.jpg"},
+        {"code": "113", "color_name": "Grau", "hex": "#9B9FA0", "main_image": "93833_113.jpg"},
+        {"code": "119", "color_name": "Grün", "hex": "#72AD41", "main_image": "93833_119.jpg", "logo_mockup_image": "93833_119-logo.jpg"},
+        {"code": "124", "color_name": "Royalblau", "hex": "#425BAD", "main_image": "93833_124.jpg"},
+        {"code": "131", "color_name": "Beige", "hex": "#BAAE88", "main_image": "93833_131.jpg"},
+        {"code": "134", "color_name": "Dunkelblau", "hex": "#444E71", "main_image": "93833_134.jpg"}
+      ],
+      "print_areas": [
+        {
+          "name": "Körper",
+          "max_width_mm": 245,
+          "max_height_mm": 55,
+          "is_default": true,
+          "techniques": [
+            {"name": "Tampondruck", "code": "PDP3", "max_colors": 1, "max_width_mm_override": 30, "max_height_mm_override": 30},
+            {"name": "Firing - Low Temperature", "code": "FIR1", "max_colors": 10},
+            {"name": "Firing - High Temperature", "code": "FIR2", "max_colors": 2}
+          ]
+        },
+        {
+          "name": "Boden",
+          "max_width_mm": 50,
+          "max_height_mm": 50,
+          "techniques": [
+            {"name": "Tampondruck", "code": "PDP4", "max_colors": 1, "max_width_mm_override": 40, "max_height_mm_override": 40},
+            {"name": "Firing - Low Temperature", "code": "FIR1", "max_colors": 10},
+            {"name": "Firing - High Temperature", "code": "FIR2", "max_colors": 2}
+          ]
+        },
+        {
+          "name": "Innenseite",
+          "max_width_mm": 60,
+          "max_height_mm": 20,
+          "techniques": [
+            {"name": "Firing - Low Temperature", "code": "FIR1", "max_colors": 10},
+            {"name": "Firing - High Temperature", "code": "FIR2", "max_colors": 2}
+          ]
+        },
+        {
+          "name": "Griff",
+          "max_width_mm": 10,
+          "max_height_mm": 40,
+          "techniques": [
+            {"name": "Firing - Low Temperature", "code": "FIR1", "max_colors": 10},
+            {"name": "Firing - High Temperature", "code": "FIR2", "max_colors": 2}
+          ]
+        },
+        {
+          "name": "Seitlicher Körper 2",
+          "max_width_mm": 30,
+          "max_height_mm": 30,
+          "techniques": [
+            {"name": "Tampondruck", "code": "PDP3", "max_colors": 1}
+          ]
+        }
+      ]
+    }
+  ]
+}
