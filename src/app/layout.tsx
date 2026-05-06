@@ -41,6 +41,12 @@ export const metadata: Metadata = {
     description: "Premium Werbemittel mit Logo, KI-Marketingfotos und schneller Lieferung.",
     locale: "de_DE",
     type: "website",
+    images: [{ url: "/logo.png" }],
+  },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
 };
 

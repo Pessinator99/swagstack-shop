@@ -47,10 +47,10 @@ export const brandConfig: BrandConfig = {
   iban: "DE00 0000 0000 0000 0000 00",
   bic: "COBADEBBXXX",
   bankName: "Musterbank AG",
-  brandOlive: "#3F5C3A",
-  brandOliveLight: "#FAF6EE",
+  brandOlive: "#3A5F45",
+  brandOliveLight: "#FAF6EF",
   brand900: "#1F2920",
-  accent50: "#F1DCCD",
+  accent50: "#EFDCCF",
 };
 
 export const BRAND_CONFIG = {
@@ -78,9 +78,9 @@ export const BRAND_CONFIG = {
     linkedin: "werbenest-gmbh",
   },
   colors: {
-    primary: "#3F5C3A",
-    accent: "#C97E5C",
-    background: "#FAF6EE",
+    primary: "#3A5F45",
+    accent: "#C77E58",
+    background: "#FAF6EF",
     foreground: "#1F2920",
   },
 } as const;
