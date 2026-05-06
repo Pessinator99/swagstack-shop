@@ -1,3 +1,7 @@
+# Werbenest Shop
+
+Premium B2B Werbemittel mit Charakter. Von der Produktauswahl bis zur Auslieferung fuer deinen Markenauftritt.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

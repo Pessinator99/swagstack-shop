@@ -1,7 +1,8 @@
 {
-  "name": "swagstack-shop",
+  "name": "werbenest-shop",
   "version": "0.1.0",
   "private": true,
+  "description": "Werbenest Shop - Premium B2B Werbemittel mit Charakter.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

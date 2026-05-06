@@ -53,7 +53,7 @@ async function run() {
     auth: { persistSession: false, autoRefreshToken: false },
   });
 
-  log(`${c.bold}${c.cyan}Seeding Swagstack Shop${c.reset}`);
+  log(`${c.bold}${c.cyan}Seeding Werbenest Shop${c.reset}`);
   log(`${c.gray}host: ${new URL(url).host}${c.reset}\n`);
 
   const tableCheck = await sb.from("categories").select("id").limit(1);

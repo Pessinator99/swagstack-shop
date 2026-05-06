@@ -1,3 +1,5 @@
+import { brandConfig } from "@/lib/brand/config";
+
 export default function DatenschutzPage() {
   return (
     <main className="mx-auto max-w-4xl space-y-6 px-6 py-16">
@@ -10,6 +12,9 @@ export default function DatenschutzPage() {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae
         neque arcu. Etiam tincidunt eros ac dictum pharetra.
       </article>
+      <p className="text-sm text-muted-foreground">
+        Verantwortliche Stelle: {brandConfig.legal_name}, {brandConfig.companyEmail}, https://werbenest.de
+      </p>
     </main>
   );
 }

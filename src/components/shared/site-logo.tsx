@@ -12,7 +12,7 @@ export function SiteLogo({ className }: { className?: string }) {
       )}
     >
       <span className="grid size-8 place-items-center rounded-[10px] bg-brand-600 text-sm font-bold text-white shadow-[var(--shadow-raised)]">
-        S
+        W
       </span>
       <span className="text-base">{brandConfig.name}</span>
     </Link>

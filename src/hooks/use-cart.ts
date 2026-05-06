@@ -5,7 +5,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
 
-export const CART_STORAGE_KEY = "swagstack.cart.v1";
+export const CART_STORAGE_KEY = "werbenest.cart.v1";
 
 export type CartLineInput = {
   productId: string;

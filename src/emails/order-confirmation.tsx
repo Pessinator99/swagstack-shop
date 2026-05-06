@@ -64,8 +64,8 @@ export default function OrderConfirmationEmail({ data, company }: OrderConfirmat
   return (
     <Html lang="de">
       <Head />
-      <Preview>Bestellbestätigung {orderNo} – Swagstack</Preview>
-      <Body style={{ margin: 0, backgroundColor: "#f4f4f0", fontFamily: "Helvetica, Arial, sans-serif" }}>
+      <Preview>Bestellbestätigung {orderNo} – Werbenest</Preview>
+      <Body style={{ margin: 0, backgroundColor: "#faf6ee", fontFamily: "Helvetica, Arial, sans-serif" }}>
         <Container
           style={{
             maxWidth,
@@ -90,7 +90,7 @@ export default function OrderConfirmationEmail({ data, company }: OrderConfirmat
                     textAlign: "center",
                   }}
                 >
-                  S
+                  W
                 </div>
               </Column>
               <Column style={{ verticalAlign: "middle", paddingLeft: 8 }}>
@@ -107,7 +107,7 @@ export default function OrderConfirmationEmail({ data, company }: OrderConfirmat
             </Heading>
             <Text style={{ fontSize: 15, lineHeight: 1.5, color: "#333", margin: "0 0 8px" }}>Hallo {greeting},</Text>
             <Text style={{ fontSize: 15, lineHeight: 1.55, color: "#333", margin: 0 }}>
-              vielen Dank für Ihre Bestellung. Wir haben Ihre Zahlung erhalten und beginnen mit der Bearbeitung.
+              vielen Dank für deine Bestellung bei Werbenest. Wir haben deine Zahlung erhalten und starten jetzt mit der Bearbeitung.
             </Text>
           </Section>
 
@@ -251,7 +251,7 @@ export default function OrderConfirmationEmail({ data, company }: OrderConfirmat
             <Text style={{ margin: "0 0 10px", fontSize: 15, fontWeight: 700, color: b.brand900 }}>
               Was passiert als Nächstes?
             </Text>
-            <Text style={{ margin: "0 0 6px", fontSize: 14, color: "#333" }}>✓ Wir bearbeiten Ihre Bestellung</Text>
+            <Text style={{ margin: "0 0 6px", fontSize: 14, color: "#333" }}>✓ Wir bearbeiten deine Bestellung</Text>
             <Text style={{ margin: "0 0 6px", fontSize: 14, color: "#333" }}>
               ✓ Druckdaten-Upload-Link kommt in 1–2 Werktagen
             </Text>

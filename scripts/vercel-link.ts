@@ -9,7 +9,7 @@
 import { spawnSync } from "node:child_process";
 
 const ROOT = process.cwd();
-const PROJECT = process.env.VERCEL_PROJECT ?? "swagstack-shop-new";
+const PROJECT = process.env.VERCEL_PROJECT ?? "werbenest-shop";
 const TEAM = process.env.VERCEL_TEAM?.trim();
 
 const args = ["exec", "vercel", "link", "--yes"];

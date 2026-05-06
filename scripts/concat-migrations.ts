@@ -15,7 +15,7 @@ async function main() {
   const files = (await readdir(dir)).filter((f) => f.endsWith(".sql")).sort();
   const parts: string[] = [
     "-- =====================================================================",
-    "-- Swagstack Shop – combined migration bundle",
+    "-- Werbenest Shop – combined migration bundle",
     "-- Generated from supabase/migrations/*.sql",
     "-- Paste into Supabase Dashboard → SQL Editor → Run",
     "-- =====================================================================",

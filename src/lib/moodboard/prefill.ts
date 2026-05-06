@@ -13,10 +13,10 @@ export interface MoodboardPrefill {
   mappedImageUrl?: string;
 }
 
-export const MOODBOARD_SESSION_PREFILL_KEY = "swagstack_moodboard_prefill";
+export const MOODBOARD_SESSION_PREFILL_KEY = "werbenest_moodboard_prefill";
 
 /** @deprecated Nur Logo, ohne mappedImageUrl — wird beim Lesen noch unterstützt. */
-export const MOODBOARD_SESSION_LOGO_KEY = "swagstack_moodboard_prefill_logo";
+export const MOODBOARD_SESSION_LOGO_KEY = "werbenest_moodboard_prefill_logo";
 
 export function saveMoodboardPrefillToSession(data: MoodboardPrefill): void {
   if (typeof window === "undefined") return;

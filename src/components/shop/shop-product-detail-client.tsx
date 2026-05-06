@@ -1143,7 +1143,7 @@ export function ShopProductDetailClient({
                 )}
                 {!isMoqSatisfied ? (
                   <p className="mt-2 text-sm">
-                    <Link className="underline" href="mailto:sales@swagstack.local">
+                    <Link className="underline" href="mailto:info@werbenest.de">
                       Angebot per E-Mail anfragen
                     </Link>
                   </p>

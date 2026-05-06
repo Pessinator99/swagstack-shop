@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
   let upstream: Response;
   try {
     upstream = await fetch(target.toString(), {
-      headers: { "User-Agent": "Mozilla/5.0 (compatible; SwagstackMoodboard/1.0)" },
+      headers: { "User-Agent": "Mozilla/5.0 (compatible; WerbenestMoodboard/1.0)" },
       next: { revalidate: 3600 },
     });
   } catch {

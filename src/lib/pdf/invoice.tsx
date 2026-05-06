@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 6,
-    backgroundColor: "#3D4A2A",
+    backgroundColor: "#3F5C3A",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     color: "#555",
     lineHeight: 1.35,
   },
-  stripeNote: { fontSize: 9, fontWeight: 700, marginBottom: 4, color: "#3D4A2A" },
+  stripeNote: { fontSize: 9, fontWeight: 700, marginBottom: 4, color: "#3F5C3A" },
 });
 
 function formatAddressLines(raw: Record<string, unknown> | null): string {
@@ -106,7 +106,7 @@ export function OrderInvoicePdf({ data }: { data: OrderDocumentData }) {
         <View style={styles.headerRow} fixed>
           <View style={{ flexDirection: "row", gap: 10 }}>
             <View style={styles.logoBox}>
-              <Text style={styles.logoLetter}>S</Text>
+              <Text style={styles.logoLetter}>W</Text>
             </View>
             <View style={styles.companyBlock}>
               <Text style={styles.companyName}>{company.companyName}</Text>

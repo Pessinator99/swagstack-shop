@@ -14,9 +14,9 @@ import { resolve } from "node:path";
 const ROOT = process.cwd();
 const ENV_FILE = resolve(ROOT, ".env.local");
 const VERCEL_PROJECT_FILE = resolve(ROOT, ".vercel", "project.json");
-const PRODUCTION_SITE_FALLBACK = "https://swagstack-shop-new.vercel.app";
+const PRODUCTION_SITE_FALLBACK = "https://werbenest.de";
 
-const PROD_SMTP_KEYS = ["SMTP_HOST", "SMTP_PORT", "SMTP_SECURE", "SMTP_USER", "SMTP_PASS"] as const;
+const PROD_SMTP_KEYS = ["SMTP_HOST", "SMTP_PORT", "SMTP_SECURE", "SMTP_USER", "SMTP_PASS", "SMTP_FROM"] as const;
 
 /** Niemals als Projekt-Env hochladen. */
 const SKIP_PUSH_KEYS = new Set(["VERCEL_TOKEN", "VERCEL_ORG_ID", "VERCEL_TEAM", "VERCEL_PROJECT"]);
@@ -108,6 +108,7 @@ function buildProductionEnv(raw: Record<string, string>): Map<string, string> {
     mapProd("SMTP_SECURE_PROD", "SMTP_SECURE");
     mapProd("SMTP_USER_PROD", "SMTP_USER");
     mapProd("SMTP_PASS_PROD", "SMTP_PASS");
+    mapProd("SMTP_FROM_PROD", "SMTP_FROM");
   }
 
   const site = out.get("NEXT_PUBLIC_SITE_URL") ?? raw.NEXT_PUBLIC_SITE_URL ?? "";

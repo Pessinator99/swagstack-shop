@@ -15,6 +15,10 @@ export default function ImpressumPage() {
           {brandConfig.address.zip} {brandConfig.address.city}
           <br />
           {brandConfig.address.country}
+          <br />
+          E-Mail: {brandConfig.companyEmail}
+          <br />
+          Website: https://werbenest.de
         </p>
       </div>
     </main>

@@ -46,7 +46,7 @@ async function main() {
     auth: { persistSession: false, autoRefreshToken: false },
   });
 
-  const password = "Test1234!Swagstack";
+  const password = "Test1234!Werbenest";
   const emails = {
     A: `rls-customer-a+${Date.now()}@test.local`,
     B: `rls-customer-b+${Date.now()}@test.local`,

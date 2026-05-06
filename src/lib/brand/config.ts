@@ -27,31 +27,63 @@ export type BrandConfig = {
 };
 
 export const brandConfig: BrandConfig = {
-  name: "Swagstack",
-  brandName: "Swagstack",
-  tagline: "Qualität, die sich sehen lässt.",
-  legal_name: "Swagstack GmbH",
-  companyName: "Swagstack GmbH",
-  street: "Musterstraße 1",
-  zipCity: "70173 Stuttgart",
+  name: "Werbenest",
+  brandName: "Werbenest",
+  tagline: "Hier wächst deine Marke",
+  legal_name: "Werbenest GmbH",
+  companyName: "Werbenest GmbH",
+  street: "Rothenburger Straße 33",
+  zipCity: "91625 Schnelldorf",
   country: "Deutschland",
   address: {
-    street: "Musterstraße 1",
-    zip: "70173",
-    city: "Stuttgart",
+    street: "Rothenburger Straße 33",
+    zip: "91625",
+    city: "Schnelldorf",
     country: "Deutschland",
   },
   ustId: "DE000000000",
   managingDirector: "Geschäftsführung (Platzhalter)",
-  companyEmail: "info@swagstack.local",
+  companyEmail: "info@werbenest.de",
   iban: "DE00 0000 0000 0000 0000 00",
   bic: "COBADEBBXXX",
   bankName: "Musterbank AG",
-  brandOlive: "#3D4A2A",
-  brandOliveLight: "#FAFAF7",
-  brand900: "#1a1f14",
-  accent50: "#f4f6ef",
+  brandOlive: "#3F5C3A",
+  brandOliveLight: "#FAF6EE",
+  brand900: "#1F2920",
+  accent50: "#F1DCCD",
 };
+
+export const BRAND_CONFIG = {
+  name: "Werbenest",
+  legalName: "Werbenest GmbH",
+  tagline: "Hier wächst deine Marke",
+  description: "Premium B2B Werbemittel mit Charakter. Vom ersten Logo bis zur Auslieferung.",
+  contact: {
+    email: "info@werbenest.de",
+    phone: "+49 30 1234567",
+    website: "https://werbenest.de",
+  },
+  address: {
+    street: "Rothenburger Straße 33",
+    zip: "91625",
+    city: "Schnelldorf",
+    country: "Deutschland",
+  },
+  vatId: process.env.COMPANY_VAT_ID,
+  iban: process.env.COMPANY_IBAN,
+  bic: process.env.COMPANY_BIC,
+  bank: process.env.COMPANY_BANK,
+  social: {
+    instagram: "@werbenest",
+    linkedin: "werbenest-gmbh",
+  },
+  colors: {
+    primary: "#3F5C3A",
+    accent: "#C97E5C",
+    background: "#FAF6EE",
+    foreground: "#1F2920",
+  },
+} as const;
 
 export function siteBaseUrl() {
   return (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");

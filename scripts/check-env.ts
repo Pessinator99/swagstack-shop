@@ -398,7 +398,7 @@ async function main() {
   dotenv.config({ path: ".env.local", override: true });
 
   console.log(
-    `${c.bold}${c.cyan}Swagstack Shop – Environment Diagnosis${c.reset}\n` +
+    `${c.bold}${c.cyan}Werbenest Shop – Environment Diagnosis${c.reset}\n` +
       `${c.gray}Phase 1 check (Next.js + Supabase + Stripe + SMTP)${c.reset}`,
   );
 

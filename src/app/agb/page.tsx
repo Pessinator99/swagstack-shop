@@ -1,3 +1,5 @@
+import { brandConfig } from "@/lib/brand/config";
+
 export default function AgbPage() {
   return (
     <main className="mx-auto max-w-4xl space-y-6 px-6 py-16">
@@ -11,6 +13,9 @@ export default function AgbPage() {
         imperdiet, augue sed suscipit cursus, nulla augue dictum dui, a varius
         lectus nisi vel magna.
       </article>
+      <p className="text-sm text-muted-foreground">
+        Verantwortliches Unternehmen: {brandConfig.legal_name}, {brandConfig.companyEmail}, https://werbenest.de
+      </p>
     </main>
   );
 }

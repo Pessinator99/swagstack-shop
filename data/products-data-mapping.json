@@ -1,5 +1,5 @@
 {
-  "_comment": "Komplette Produktdaten aus Stricker-PDFs für Migration 0016. Alle Hex-Farben sind aus den echten Bildern extrahiert. Die Bilder liegen entpackt in /home/claude/bilder-strukturiert/{slug}/ und im ZIP swagstack-produktbilder.zip. Bildbenennung: {stricker_id}_{farbcode}.jpg = Hauptbild, -a/-b/-c/-d/-e = Perspektiven, -logo = Mockup mit Beispiel-Logo, set = Übersicht aller Farben.",
+  "_comment": "Komplette Produktdaten aus Stricker-PDFs für Migration 0016. Alle Hex-Farben sind aus den echten Bildern extrahiert. Die Bilder liegen entpackt in /home/claude/bilder-strukturiert/{slug}/ und im ZIP werbenest-produktbilder.zip. Bildbenennung: {stricker_id}_{farbcode}.jpg = Hauptbild, -a/-b/-c/-d/-e = Perspektiven, -logo = Mockup mit Beispiel-Logo, set = Übersicht aller Farben.",
   "products": [
     {
       "slug": "canary-einkaufstasche-non-woven",

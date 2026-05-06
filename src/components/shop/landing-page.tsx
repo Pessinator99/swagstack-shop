@@ -70,15 +70,14 @@ export function LandingPage() {
               variants={fadeInUp}
               className="text-5xl leading-tight font-semibold text-white sm:text-6xl"
             >
-              Werbemittel, die{" "}
-              <span className="font-serif italic text-accent-200">bleiben</span>.
+              Werbenest - Hier wächst deine Marke
             </motion.h1>
             <motion.p
               variants={fadeInUp}
               className="max-w-2xl text-lg leading-relaxed text-zinc-200"
             >
-              Branded merchandise mit KI-Logo-Platzierung und Moodboards. Ein
-              Shop für alle Ihre Lieferanten.
+              Premium Werbemittel mit Charakter. Vom ersten Logo bis zur
+              Auslieferung - wir kümmern uns um deinen Markenauftritt.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-3">
               <Button asChild variant="accent" size="lg">
@@ -207,7 +206,7 @@ export function LandingPage() {
             <p className="text-sm text-muted-foreground">
               Vertrieb und Beratung:
               <br />
-              hallo@example.com
+              info@werbenest.de
               <br />
               +49 30 1234567
             </p>

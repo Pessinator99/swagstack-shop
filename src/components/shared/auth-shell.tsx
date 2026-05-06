@@ -15,7 +15,7 @@ export function AuthShell({ title, subtitle, children }: AuthShellProps) {
           <SiteLogo className="text-white [&_span:last-child]:text-white" />
           <div className="space-y-4">
             <p className="text-sm uppercase tracking-[0.18em] text-zinc-300">
-              Swagstack B2B
+              Werbenest B2B
             </p>
             <h1 className="text-4xl leading-tight font-semibold">
               Werbemittel-Einkauf auf das nächste Level.
